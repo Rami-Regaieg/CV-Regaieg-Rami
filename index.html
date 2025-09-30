@@ -18,6 +18,44 @@
         },
       };
     </script>
+    <style>
+      /* Accordéon uniquement sur mobile */
+      @media (max-width: 768px) {
+        .accordion-content {
+          max-height: 0;
+          overflow: hidden;
+          transition: max-height 0.3s ease-out;
+        }
+
+        .accordion-content.active {
+          max-height: 2000px;
+          transition: max-height 0.5s ease-in;
+        }
+
+        .accordion-icon {
+          transition: transform 0.3s ease;
+        }
+
+        .accordion-icon.active {
+          transform: rotate(180deg);
+        }
+      }
+
+      /* Sur desktop, tout est toujours visible */
+      @media (min-width: 769px) {
+        .accordion-content {
+          max-height: none !important;
+        }
+
+        .accordion-toggle {
+          cursor: default !important;
+        }
+
+        .accordion-icon {
+          display: none;
+        }
+      }
+    </style>
   </head>
   <body class="bg-gray-50 font-sans">
     <div class="max-w-4xl mx-auto bg-white shadow-2xl">
@@ -27,19 +65,13 @@
       >
         <div class="flex flex-col md:flex-row items-center gap-6">
           <div
-            class="w-32 h-32 bg-white/20 rounded-full flex items-center justify-center"
+            class="w-32 h-32 bg-white/20 rounded-full flex items-center justify-center overflow-hidden"
           >
-            <svg
-              class="w-16 h-16 text-white"
-              fill="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <img
-                src="https://avatars.githubusercontent.com/u/198733840?v=4"
-                alt="Avatar"
-                class="rounded-full w-full h-full object-cover"
-              />
-            </svg>
+            <img
+              src="https://avatars.githubusercontent.com/u/198733840?v=4"
+              alt="Avatar"
+              class="rounded-full w-full h-full object-cover"
+            />
           </div>
           <div class="text-center md:text-left">
             <h1 class="text-4xl font-bold mb-2">Rami REGAIEG</h1>
@@ -86,11 +118,23 @@
           <!-- Compétences Techniques -->
           <section>
             <h3
-              class="text-lg font-bold text-tech-dark mb-4 border-b-2 border-tech-blue pb-2"
+              class="text-lg font-bold text-tech-dark mb-4 border-b-2 border-tech-blue pb-2 flex items-center justify-between accordion-toggle cursor-pointer md:cursor-default"
+              onclick="toggleAccordion(this)"
             >
-              Compétences Techniques
+              <span>Compétences Techniques</span>
+              <svg
+                class="w-5 h-5 accordion-icon md:hidden"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                />
+              </svg>
             </h3>
-            <div class="space-y-4">
+            <div class="accordion-content space-y-4">
               <div>
                 <h4 class="font-semibold text-sm text-gray-700 mb-2">
                   Langages
@@ -166,11 +210,23 @@
           <!-- Certifications -->
           <section>
             <h3
-              class="text-lg font-bold text-tech-dark mb-4 border-b-2 border-tech-blue pb-2"
+              class="text-lg font-bold text-tech-dark mb-4 border-b-2 border-tech-blue pb-2 flex items-center justify-between accordion-toggle cursor-pointer md:cursor-default"
+              onclick="toggleAccordion(this)"
             >
-              Certifications
+              <span>Certifications</span>
+              <svg
+                class="w-5 h-5 accordion-icon md:hidden"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                />
+              </svg>
             </h3>
-            <div class="space-y-3">
+            <div class="accordion-content space-y-3">
               <div class="bg-white p-3 rounded-lg shadow-sm">
                 <h4 class="font-semibold text-sm">FreeCodeCamp</h4>
                 <p class="text-xs text-gray-600">HTML-CSS</p>
@@ -187,11 +243,23 @@
           <!-- Langues -->
           <section>
             <h3
-              class="text-lg font-bold text-tech-dark mb-4 border-b-2 border-tech-blue pb-2"
+              class="text-lg font-bold text-tech-dark mb-4 border-b-2 border-tech-blue pb-2 flex items-center justify-between accordion-toggle cursor-pointer md:cursor-default"
+              onclick="toggleAccordion(this)"
             >
-              Langues
+              <span>Langues</span>
+              <svg
+                class="w-5 h-5 accordion-icon md:hidden"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                />
+              </svg>
             </h3>
-            <div class="space-y-2">
+            <div class="accordion-content space-y-2">
               <div class="flex justify-between">
                 <span class="text-sm">Français</span>
                 <span class="text-xs text-gray-600">Natif</span>
@@ -206,11 +274,23 @@
           <!-- Formation -->
           <section>
             <h3
-              class="text-2xl font-bold text-tech-dark mb-6 border-b-2 border-tech-blue pb-2"
+              class="text-2xl font-bold text-tech-dark mb-6 border-b-2 border-tech-blue pb-2 flex items-center justify-between accordion-toggle cursor-pointer md:cursor-default"
+              onclick="toggleAccordion(this)"
             >
-              Formation
+              <span>Formation</span>
+              <svg
+                class="w-5 h-5 accordion-icon md:hidden"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                />
+              </svg>
             </h3>
-            <div class="space-y-4">
+            <div class="accordion-content space-y-4">
               <div
                 class="bg-white p-4 rounded-lg shadow-sm border-l-4 border-gray-300"
               >
@@ -249,28 +329,53 @@
           <!-- Profil -->
           <section>
             <h3
-              class="text-2xl font-bold text-tech-dark mb-4 border-b-2 border-tech-blue pb-2"
+              class="text-2xl font-bold text-tech-dark mb-4 border-b-2 border-tech-blue pb-2 flex items-center justify-between accordion-toggle cursor-pointer md:cursor-default"
+              onclick="toggleAccordion(this)"
             >
-              Profil Professionnel
+              <span>Profil Professionnel</span>
+              <svg
+                class="w-5 h-5 accordion-icon md:hidden"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                />
+              </svg>
             </h3>
-            <p class="text-gray-700 leading-relaxed">
-              Chargé de support applicatif web avec 2 ans d’expérience,
-              passionné par la résolution de problèmes et en transition vers le
-              développement web. Mon sens client et ma compréhension des besoins
-              métier me permettent de proposer des solutions adaptées aux
-              utilisateurs.
-            </p>
+            <div class="accordion-content">
+              <p class="text-gray-700 leading-relaxed">
+                Chargé de support applicatif web avec 2 ans d'expérience,
+                passionné par la résolution de problèmes et en transition vers
+                le développement web. Mon sens client et ma compréhension des
+                besoins métier me permettent de proposer des solutions adaptées
+                aux utilisateurs.
+              </p>
+            </div>
           </section>
 
           <!-- Expérience -->
-          <!--chargé de support-->
           <section>
             <h3
-              class="text-2xl font-bold text-tech-dark mb-6 border-b-2 border-tech-blue pb-2"
+              class="text-2xl font-bold text-tech-dark mb-6 border-b-2 border-tech-blue pb-2 flex items-center justify-between accordion-toggle cursor-pointer md:cursor-default"
+              onclick="toggleAccordion(this)"
             >
-              Expérience Professionnelle
+              <span>Expérience Professionnelle</span>
+              <svg
+                class="w-5 h-5 accordion-icon md:hidden"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                />
+              </svg>
             </h3>
-            <div class="space-y-6">
+            <div class="accordion-content space-y-6">
               <div
                 class="bg-white border-l-4 border-tech-blue pl-6 py-4 shadow-sm"
               >
@@ -296,7 +401,7 @@
                     <span
                       >Support applicatif N2 : gestion des tickets (assistance &
                       bugs) via Jira, analyse fonctionnelle (reproduction
-                      d’anomalies, identification de root cause, tests de
+                      d'anomalies, identification de root cause, tests de
                       validation).</span
                     >
                   </li>
@@ -321,14 +426,14 @@
                   <li class="flex items-start gap-2">
                     <span class="text-tech-blue mt-1">•</span>
                     <span
-                      >Contribution à l’amélioration des process de gestion des
+                      >Contribution à l'amélioration des process de gestion des
                       tickets.</span
                     >
                   </li>
                   <li class="flex items-start gap-2">
                     <span class="text-tech-blue mt-1">•</span>
                     <span
-                      >Aide ponctuelle en HTML/CSS pour l’équipe
+                      >Aide ponctuelle en HTML/CSS pour l'équipe
                       intégration.</span
                     >
                   </li>
@@ -342,16 +447,13 @@
                   <li class="flex items-start gap-2">
                     <span class="text-tech-blue mt-1">•</span>
                     <span
-                      >Formation et accompagnement d’alternants et
+                      >Formation et accompagnement d'alternants et
                       collaborateurs.</span
                     >
                   </li>
                 </ul>
               </div>
-            </div>
-          </section>
-          <section>
-            <div class="space-y-6">
+
               <div
                 class="bg-white border-l-4 border-tech-blue pl-6 py-4 shadow-sm"
               >
@@ -394,11 +496,23 @@
           <!-- Projets -->
           <section>
             <h3
-              class="text-2xl font-bold text-tech-dark mb-6 border-b-2 border-tech-blue pb-2"
+              class="text-2xl font-bold text-tech-dark mb-6 border-b-2 border-tech-blue pb-2 flex items-center justify-between accordion-toggle cursor-pointer md:cursor-default"
+              onclick="toggleAccordion(this)"
             >
-              Projets de Développement
+              <span>Projets de Développement</span>
+              <svg
+                class="w-5 h-5 accordion-icon md:hidden"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                />
+              </svg>
             </h3>
-            <div class="grid gap-4">
+            <div class="accordion-content grid gap-4">
               <div
                 class="bg-gradient-to-r from-blue-50 to-indigo-50 p-4 rounded-lg border"
               >
@@ -466,5 +580,38 @@
         </p>
       </footer>
     </div>
+
+    <script>
+      function toggleAccordion(element) {
+        // Ne fonctionne que sur mobile
+        if (window.innerWidth > 768) return;
+
+        const content = element.nextElementSibling;
+        const icon = element.querySelector(".accordion-icon");
+
+        content.classList.toggle("active");
+        icon.classList.toggle("active");
+      }
+
+      // Ouvrir toutes les sections par défaut sur desktop
+      function initAccordion() {
+        if (window.innerWidth > 768) {
+          document.querySelectorAll(".accordion-content").forEach((content) => {
+            content.classList.add("active");
+          });
+        } else {
+          // Sur mobile, tout est fermé par défaut
+          document.querySelectorAll(".accordion-content").forEach((content) => {
+            content.classList.remove("active");
+          });
+        }
+      }
+
+      // Initialiser au chargement
+      initAccordion();
+
+      // Réinitialiser si la fenêtre est redimensionnée
+      window.addEventListener("resize", initAccordion);
+    </script>
   </body>
 </html>
