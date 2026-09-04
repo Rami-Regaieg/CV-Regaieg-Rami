@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
@@ -26,31 +26,31 @@
           overflow: hidden;
           transition: max-height 0.3s ease-out;
         }
-        
+
         .accordion-content.active {
-          max-height: 3000px;
+          max-height: 2000px;
           transition: max-height 0.5s ease-in;
         }
-        
+
         .accordion-icon {
           transition: transform 0.3s ease;
         }
-        
+
         .accordion-icon.active {
           transform: rotate(180deg);
         }
       }
-      
+
       /* Sur desktop, tout est toujours visible */
       @media (min-width: 769px) {
         .accordion-content {
           max-height: none !important;
         }
-        
+
         .accordion-toggle {
           cursor: default !important;
         }
-        
+
         .accordion-icon {
           display: none;
         }
@@ -75,45 +75,39 @@
           </div>
           <div class="text-center md:text-left">
             <h1 class="text-4xl font-bold mb-2">Rami REGAIEG</h1>
-            <p class="text-XL">
-              Disponible immédiatement
-            </p>
-          </br>
-            <div class="flex flex-col sm:flex-row sm:flex-wrap sm:justify-center gap-3 text-sm">
-  <!-- EMAIL -->
-  <div class="flex items-center gap-2">
-    <span class="sm:hidden">•</span>
-    <svg class="hidden sm:block w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-      <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-    </svg>
-    <span>rami.regaieg@gmail.com</span>
-  </div>
-
-  <!-- TELEPHONE -->
-  <div class="flex items-center gap-2">
-    <span class="sm:hidden">•</span>
-    <svg class="hidden sm:block w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-      <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
-    </svg>
-    <span>06 52 18 18 34</span>
-  </div>
-
-  <!-- VILLE -->
-  <div class="flex items-center gap-2">
-    <span class="sm:hidden">•</span>
-    <svg class="hidden sm:block w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-      <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-    </svg>
-    <span>Villepinte, France</span>
-  </div>
-
-  <!-- VEHICULE -->
-  <div class="flex items-center gap-2">
-    <span class="sm:hidden">•</span>
-    <span>🚗 Véhiculé Permis B</span>
-  </div>
-</div>
-
+            <h2 class="text-xl font-light mb-4">
+              Chargé de Support Applicatif Web → Testeur QA
+            </h2>
+            <h2 class="text-xl font-light mb-4">Disponible immédiatement</h2>
+            <div
+              class="flex flex-wrap justify-center md:justify-start gap-4 text-sm"
+            >
+              <div class="flex items-center gap-2">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
+                  />
+                </svg>
+                <span>rami.regaieg@gmail.com</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"
+                  />
+                </svg>
+                <span>06 52 18 18 34</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
+                  />
+                </svg>
+                <span>Villepinte, France</span>
+              </div>
+              🚗 Véhiculé Permis B
+            </div>
           </div>
         </div>
       </header>
@@ -128,8 +122,16 @@
               onclick="toggleAccordion(this)"
             >
               <span>Compétences Techniques</span>
-              <svg class="w-5 h-5 accordion-icon md:hidden" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+              <svg
+                class="w-5 h-5 accordion-icon md:hidden"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                />
               </svg>
             </h3>
             <div class="accordion-content space-y-4">
@@ -196,6 +198,10 @@
                     class="bg-purple-600 text-white px-2 py-1 rounded text-xs"
                     >Algolia</span
                   >
+                  <span
+                    class="bg-purple-600 text-white px-2 py-1 rounded text-xs"
+                    >Power BI</span
+                  >
                 </div>
               </div>
             </div>
@@ -208,8 +214,16 @@
               onclick="toggleAccordion(this)"
             >
               <span>Certifications</span>
-              <svg class="w-5 h-5 accordion-icon md:hidden" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+              <svg
+                class="w-5 h-5 accordion-icon md:hidden"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                />
               </svg>
             </h3>
             <div class="accordion-content space-y-3">
@@ -233,8 +247,16 @@
               onclick="toggleAccordion(this)"
             >
               <span>Langues</span>
-              <svg class="w-5 h-5 accordion-icon md:hidden" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+              <svg
+                class="w-5 h-5 accordion-icon md:hidden"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                />
               </svg>
             </h3>
             <div class="accordion-content space-y-2">
@@ -256,20 +278,19 @@
               onclick="toggleAccordion(this)"
             >
               <span>Formation</span>
-              <svg class="w-5 h-5 accordion-icon md:hidden" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+              <svg
+                class="w-5 h-5 accordion-icon md:hidden"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                />
               </svg>
             </h3>
             <div class="accordion-content space-y-4">
-              <div
-                class="bg-white p-4 rounded-lg shadow-sm border-l-4 border-gray-300"
-              >
-                <h4 class="font-semibold text-tech-dark">
-                  Formation Continue - Développement Web
-                </h4>
-                <p class="text-tech-blue">Autoformation • 2024 - 2025</p>
-                <p class="text-sm text-gray-600 mt-2">JavaScript, HTML-CSS</p>
-              </div>
               <div
                 class="bg-white p-4 rounded-lg shadow-sm border-l-4 border-tech-blue"
               >
@@ -303,17 +324,23 @@
               onclick="toggleAccordion(this)"
             >
               <span>Profil Professionnel</span>
-              <svg class="w-5 h-5 accordion-icon md:hidden" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+              <svg
+                class="w-5 h-5 accordion-icon md:hidden"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                />
               </svg>
             </h3>
             <div class="accordion-content">
               <p class="text-gray-700 leading-relaxed">
-                Chargé de support applicatif web avec 2 ans d'expérience,
-                passionné par la résolution de problèmes et en transition vers le
-                développement web full-stack. Mon sens client et ma compréhension
-                des besoins métier me permettent de proposer des solutions
-                adaptées aux utilisateurs.
+                Chargé de support applicatif web avec 3 ans d'expérience,
+                passionné par la résolution de problèmes et en transition vers
+                Testeur QA.
               </p>
             </div>
           </section>
@@ -325,8 +352,16 @@
               onclick="toggleAccordion(this)"
             >
               <span>Expérience Professionnelle</span>
-              <svg class="w-5 h-5 accordion-icon md:hidden" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+              <svg
+                class="w-5 h-5 accordion-icon md:hidden"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                />
               </svg>
             </h3>
             <div class="accordion-content space-y-6">
@@ -407,6 +442,43 @@
                   </li>
                 </ul>
               </div>
+
+              <div
+                class="bg-white border-l-4 border-tech-blue pl-6 py-4 shadow-sm"
+              >
+                <div class="flex justify-between items-start mb-2">
+                  <h4 class="text-lg font-semibold text-tech-dark">
+                    Hôte Polyvalent Service Client
+                  </h4>
+
+                  <span
+                    class="text-sm text-gray-600 bg-gray-100 px-3 py-1 rounded"
+                    >2015 - 2023</span
+                  >
+                </div>
+                <p class="text-sm text-gray-600 mt-2">Service Client</p>
+                <p class="text-tech-blue font-medium mb-3">
+                  Groupe FNAC DARTY • Aulnay-Sous-Bois
+                </p>
+                <ul class="text-gray-700 space-y-2">
+                  <li class="flex items-start gap-2">
+                    <span class="text-tech-blue mt-1">•</span>
+                    <span>Encaissements & remboursements</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="text-tech-blue mt-1">•</span>
+                    <span>Dossiers de financement</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="text-tech-blue mt-1">•</span>
+                    <span>Trésorerie de caisse</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="text-tech-blue mt-1">•</span>
+                    <span>Vente de billetterie</span>
+                  </li>
+                </ul>
+              </div>
             </div>
           </section>
 
@@ -417,8 +489,16 @@
               onclick="toggleAccordion(this)"
             >
               <span>Projets de Développement</span>
-              <svg class="w-5 h-5 accordion-icon md:hidden" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+              <svg
+                class="w-5 h-5 accordion-icon md:hidden"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                />
               </svg>
             </h3>
             <div class="accordion-content grid gap-4">
@@ -426,18 +506,13 @@
                 class="bg-gradient-to-r from-blue-50 to-indigo-50 p-4 rounded-lg border"
               >
                 <h4 class="font-semibold text-tech-dark mb-2">
-                  🕒🤖 Simulateur d'horaire de départ
-                  <a
-                    href="https://rami-regaieg.github.io/calcul-heure-depart/"
-                    target="_blank"
-                    class="underline"
-                  >
-                    (Lien vers le projet)
-                  </a>
+                  🤖 Agent Replication
                 </h4>
 
                 <p class="text-sm text-gray-700 mb-3">
-                  Page web statique pour simuler un horaire de départ réel.
+                  Développement d'un script local qui permets d'automatiser le
+                  process du support sur les demandes de réplications Intershop
+                  des filiales
                 </p>
                 <div class="flex gap-2 flex-wrap">
                   <span class="bg-blue-500 text-white px-2 py-1 rounded text-xs"
@@ -450,77 +525,6 @@
                   <span
                     class="bg-orange-500 text-white px-2 py-1 rounded text-xs"
                     >JavaScript</span
-                  >
-                  <span class="bg-red-500 text-white px-2 py-1 rounded text-xs"
-                    >Vibe Coding</span
-                  >
-                </div>
-              </div>
-              <div
-                class="bg-gradient-to-r from-blue-50 to-indigo-50 p-4 rounded-lg border"
-              >
-                <h4 class="font-semibold text-tech-dark mb-2">
-                  🔤🧐Jeu du Pendu
-                  <a
-                    href="https://rami-regaieg.github.io/Rami-Jeu-du-Pendu/"
-                    target="_blank"
-                    class="underline"
-                  >
-                    (Lien vers le projet)
-                  </a>
-                </h4>
-
-                <p class="text-sm text-gray-700 mb-3">
-                  Page web statique pour simuler le jeu du pendu.
-                </p>
-                <div class="flex gap-2 flex-wrap">
-                  <span class="bg-blue-500 text-white px-2 py-1 rounded text-xs"
-                    >HTML</span
-                  >
-                  <span
-                    class="bg-green-500 text-white px-2 py-1 rounded text-xs"
-                    >CSS</span
-                  >
-                  <span
-                    class="bg-orange-500 text-white px-2 py-1 rounded text-xs"
-                    >JavaScript</span
-                  >
-                  <span class="bg-red-500 text-white px-2 py-1 rounded text-xs"
-                    >Vibe Coding</span
-                  >
-                </div>
-              </div>
-              <div
-                class="bg-gradient-to-r from-blue-50 to-indigo-50 p-4 rounded-lg border"
-              >
-                <h4 class="font-semibold text-tech-dark mb-2">
-                  📝✅ To-Do List
-                  <a
-                    href="https://rami-regaieg.github.io/rami-to-do-list/"
-                    target="_blank"
-                    class="underline"
-                  >
-                    (Lien vers le projet)
-                  </a>
-                </h4>
-
-                <p class="text-sm text-gray-700 mb-3">
-                  Page web statique pour ajouter les tâches d'une to-do list.
-                </p>
-                <div class="flex gap-2 flex-wrap">
-                  <span class="bg-blue-500 text-white px-2 py-1 rounded text-xs"
-                    >HTML</span
-                  >
-                  <span
-                    class="bg-green-500 text-white px-2 py-1 rounded text-xs"
-                    >CSS</span
-                  >
-                  <span
-                    class="bg-orange-500 text-white px-2 py-1 rounded text-xs"
-                    >JavaScript</span
-                  >
-                  <span class="bg-red-500 text-white px-2 py-1 rounded text-xs"
-                    >Vibe Coding</span
                   >
                 </div>
               </div>
@@ -532,26 +536,26 @@
       <!-- Footer -->
       <footer class="bg-tech-dark text-white p-6 text-center">
         <p class="text-xl">
-              <a
-                href="https://github.com/rami-regaieg"
-                class="text-tech-blue hover:underline"
-                target="_blank"
-                >GitHub</a
-              >
-              •
-              <a
-                href="https://linkedin.com/in/rami-regaieg-555475166"
-                class="text-tech-blue hover:underline"
-                target="_blank"
-                >LinkedIn</a
-              >
-            </p>
+          <a
+            href="https://github.com/rami-regaieg"
+            class="text-tech-blue hover:underline"
+            target="_blank"
+            >GitHub</a
+          >
+          •
+          <a
+            href="https://linkedin.com/in/rami-regaieg-555475166"
+            class="text-tech-blue hover:underline"
+            target="_blank"
+            >LinkedIn</a
+          >
+        </p>
         <br />
         <p class="text-xl italic">
           • CV entièrement codé en HTML-CSS Tailwind via VS Code en Vibe Coding
           <a
             class="underline"
-            href="https://gist.github.com/Rami-Regaieg/002fbe616d37534a0eb4590142cefd5d"
+            href="https://gist.githubusercontent.com/Rami-Regaieg/002fbe616d37534a0eb4590142cefd5d/raw/f82f4090bf943e6702f31172fb4350ba3cecf740/html"
             target="_blank"
           >
             (Code disponible ici)</a
@@ -565,20 +569,20 @@
       function toggleAccordion(element) {
         // Ne fonctionne que sur mobile
         if (window.innerWidth > 768) return;
-        
+
         const content = element.nextElementSibling;
-        const icon = element.querySelector('.accordion-icon');
-        
-        content.classList.toggle('active');
-        icon.classList.toggle('active');
+        const icon = element.querySelector(".accordion-icon");
+
+        content.classList.toggle("active");
+        icon.classList.toggle("active");
       }
-      
+
       // Initialiser une seule fois au chargement de la page
-      document.addEventListener('DOMContentLoaded', function() {
+      document.addEventListener("DOMContentLoaded", function () {
         if (window.innerWidth > 768) {
           // Sur desktop, tout est ouvert
-          document.querySelectorAll('.accordion-content').forEach(content => {
-            content.classList.add('active');
+          document.querySelectorAll(".accordion-content").forEach((content) => {
+            content.classList.add("active");
           });
         }
         // Sur mobile, tout reste fermé par défaut (pas besoin de code)
